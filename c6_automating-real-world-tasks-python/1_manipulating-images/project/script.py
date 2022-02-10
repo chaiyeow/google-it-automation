@@ -19,8 +19,7 @@ for file in glob('ic_*'): # ignore hidden file (images/.DS_Store) from iteration
     2. Resize the image from 192x192 to 128x128
     3. Save the image to a new folder in .jpeg format
     """
-    path, filename = os.path.split(file)
-    filename = os.path.splitext(filename)[0] # get filename without extension
+    path, filename = os.path.split(file) 
     image.rotate(270).resize((128,128)).save('/opt/icons/{}.jpeg'.format(filename))
 
 print('OK')
